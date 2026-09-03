@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <title>Ejemplo Backend</title>
+    <style>
+        body {
+            background-color: lightcyan;
+            font-size: 20px;
+        }
+
+        .elEstilo {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+            
+        h1 {
+            color: darkgreen;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        footer{
+            text-align: center;
+            font-size: 15px;
+        }
+
+        table {
+            width: 400px;
+            margin: 20px auto;
+            padding: 5px auto;
+            border: 2px solid;
+            align-content: center;
+        }
+
+        th, td, tr {
+            border: 1px solid;
+        }
+
+        textarea{
+            width: 300px;
+            height: 80px;
+            padding: 5px auto;
+        }
+    </style>    
+</head>
+<body>
+    <main> 
+        <div class="elEstilo">
+            <h1>Calculadora de Cuota de Préstamo</h1>
+            <form action="/prestamo" enctype="application/x-www-form-urlencoded" method="post">
+                <table>
+                    <caption>Calculadora Online</caption>
+                    <tbody>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" value="Juan" name="nombre" required></td>
+                        </tr>
+                        <tr>
+                            <td>Préstamo</td>
+                            <td><input type="text" value="1000000" name="prestamo" required></td>
+                        </tr>
+                        <tr>
+                            <td>N° de meses</td>
+                            <td><input type="text" value="12" name="n" required></td>
+                        </tr>
+                        <tr>
+                            <td>Interés (ej: 0.15)</td>
+                            <td><input type="text" value="0.02" name="interes" required></td>
+                        </tr>
+                        <tr>
+                            <td>Acción:</td> 
+                            <td>   
+                                <input type="radio" value="Calcular" name="accion" checked>Calcular
+                                </label><input type="radio" value="Historial" name="accion">Historial          
+                            </td>
+                        </tr>      
+                        <tr>
+                            <td colspan="5" style="text-align: center;"><input type="submit"  value="Enviar"></td>              
+                        </tr>                                 
+                    </tbody>
+                </table>                          
+            </form>
+        </div>
+    </main>
+    <footer> 
+        <hr>    
+        Fuente propia para el curso de Estructura de Datos 1 en la Universidad Autónoma de Occidente
+    </footer>
+</body>
+</html>
